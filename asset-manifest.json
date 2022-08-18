@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/keep-app/static/js/main.bcd77885.js",
+    "main.js": "/keep-app/static/js/main.aa979dd1.js",
     "index.html": "/keep-app/index.html",
-    "main.bcd77885.js.map": "/keep-app/static/js/main.bcd77885.js.map"
+    "main.aa979dd1.js.map": "/keep-app/static/js/main.aa979dd1.js.map"
   },
   "entrypoints": [
-    "static/js/main.bcd77885.js"
+    "static/js/main.aa979dd1.js"
   ]
 }

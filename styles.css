@@ -27,16 +27,22 @@ header h1 {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   text-align: center;
   bottom: 0;
   left: 16px;
   right: 16px;
   height: 2.5rem;
+  z-index: 0;
 }
 
 footer p {
   color: #ccc;
+}
+
+.notes-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .note {
@@ -44,9 +50,10 @@ footer p {
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
   padding: 10px;
-  width: 240px;
   margin: 16px;
   float: left;
+  height: 100%;
+  flex: 1 1 240px;
 }
 
 .note h1 {
