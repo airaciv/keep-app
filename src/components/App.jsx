@@ -26,15 +26,17 @@ function App() {
     <div>
       <Header />
       <CreateArea handleSubmit={addNote} />
-      {list.map((note, i) => (
-        <Note
-          key={i}
-          id={i}
-          title={note.title}
-          content={note.content}
-          deleteNote={deleteNote}
-        />
-      ))}
+      <div className="notes-container">
+        {list.map((note, i) => (
+          <Note
+            key={i}
+            id={i}
+            title={note.title}
+            content={note.content}
+            deleteNote={deleteNote}
+          />
+        ))}
+      </div>
       {/* {notes.map((note) => (
         <Note key={note.id} title={note.title} content={note.content} />
       ))} */}
