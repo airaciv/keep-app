@@ -33,7 +33,7 @@ footer {
   left: 16px;
   right: 16px;
   height: 2.5rem;
-  z-index: -1;
+  z-index: 0;
 }
 
 footer p {
@@ -50,10 +50,10 @@ footer p {
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
   padding: 10px;
-  width: 240px;
   margin: 16px;
   float: left;
   height: 100%;
+  flex: 1 1 240px;
 }
 
 .note h1 {
