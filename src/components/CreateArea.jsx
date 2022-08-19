@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import AddIcon from "@mui/icons-material/Add";
+import Fab from "@mui/material/Fab";
+import Zoom from "@mui/material/Zoom";
 
 //CHALLENGE:
 //1. Implement the add note functionality.
@@ -20,29 +23,43 @@ function CreateArea(props) {
     });
   }
 
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  function expand() {
+    setIsExpanded(true);
+  }
+
   return (
     <div>
       <form
+        className="create-note"
         onSubmit={(e) => {
           e.preventDefault();
           props.handleSubmit(note);
           setNote({ title: "", content: "" });
         }}
       >
-        <input
-          name="title"
-          placeholder="Title"
-          value={note.title}
-          onChange={handleChange}
-        />
+        {isExpanded && (
+          <input
+            name="title"
+            placeholder="Title"
+            value={note.title}
+            onChange={handleChange}
+          />
+        )}
         <textarea
           name="content"
           placeholder="Take a note..."
-          rows="3"
+          rows={isExpanded ? 3 : 1}
           value={note.content}
           onChange={handleChange}
+          onClick={expand}
         />
-        <button type="submit">Add</button>
+        <Zoom in={isExpanded}>
+          <Fab type="submit">
+            <AddIcon />
+          </Fab>
+        </Zoom>
       </form>
     </div>
   );
